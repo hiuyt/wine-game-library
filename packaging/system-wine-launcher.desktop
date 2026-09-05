@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Game Library
+Name[zh_CN]=Wine 游戏库
+Comment=Launch games with the system Wine and isolated prefixes
+Comment[zh_CN]=使用系统 Wine 和独立容器启动游戏
+Exec=system-wine-launcher
+Icon=wine-game-library
+Terminal=false
+Categories=Game;
+StartupNotify=true
