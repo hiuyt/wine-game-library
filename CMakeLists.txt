@@ -14,6 +14,7 @@ qt_add_resources(system-wine-launcher app_icons
 install(TARGETS system-wine-launcher RUNTIME DESTINATION bin)
 install(FILES packaging/system-wine-launcher.desktop DESTINATION share/applications)
 install(FILES assets/wine-game-library.png DESTINATION share/pixmaps)
+install(FILES packaging/icons/index.theme DESTINATION share/icons/hicolor)
 foreach(size 64 128 256 512)
     install(FILES packaging/icons/${size}x${size}/wine-game-library.png
             DESTINATION share/icons/hicolor/${size}x${size}/apps)
