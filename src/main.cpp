@@ -196,8 +196,8 @@ private:
                                                          tr("Windows 程序 (*.exe *.EXE)"));
         if (exe.isEmpty()) return;
         const QString canonical = QFileInfo(exe).canonicalFilePath();
-        if (canonical.isEmpty() || (!canonical.startsWith(root + "/") && canonical != root)) {
-            QMessageBox::warning(this, tr("目录不符"), tr("请选择 ~/galgame 内的 EXE。"));
+        if (canonical.isEmpty()) {
+            QMessageBox::warning(this, tr("文件无效"), tr("无法读取所选 EXE。"));
             return;
         }
         for (int i = 0; i < games_->count(); ++i) {

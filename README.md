@@ -3,7 +3,7 @@
 轻量 Qt 6 Wine 游戏启动器，直接使用系统 Wine，不依赖 Proton、UMU、
 Bottles 或 Lutris。
 
-- 从 `~/galgame` 添加 Windows 游戏
+- 从任意位置添加 Windows 游戏（选择器默认打开 `~/galgame`）
 - 每个游戏使用独立 `WINEPREFIX`
 - 默认使用 bubblewrap 隔离其他 home 文件
 - 自动提取 EXE 图标并配置常见中日文字体
