@@ -324,6 +324,9 @@ private:
                          "--symlink", "usr/bin", "/bin", "--symlink", "usr/lib64", "/lib64",
                          "--dev", "/dev", "--proc", "/proc", "--tmpfs", "/tmp",
                          "--tmpfs", "/home", "--dir", home};
+        for (const QString& deviceDir : {QStringLiteral("/dev/dri"), QStringLiteral("/dev/snd")}) {
+            if (QFileInfo::exists(deviceDir)) args << "--dev-bind" << deviceDir << deviceDir;
+        }
         const auto env = QProcessEnvironment::systemEnvironment();
         const QString runtime = env.value("XDG_RUNTIME_DIR");
         if (!runtime.isEmpty()) {
